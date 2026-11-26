@@ -1,0 +1,27 @@
+{
+  "name": "hapi-jwt-empty-key-poc",
+  "version": "1.0.0",
+  "description": "Local proof of concept for GHSA-c26c-q3fh-3xf7 (@hapi/jwt keys function)",
+  "scripts": {
+    "poc:vulnerable": "node poc/run.js vulnerable",
+    "poc:fixed": "node poc/run.js fixed",
+    "compare": "sh scripts/compare.sh"
+  },
+  "keywords": [
+    "hapi",
+    "jwt",
+    "security",
+    "poc"
+  ],
+  "author": "area51ec",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/hapi": "21.4.14",
+    "@hapi/jwt-fixed": "npm:@hapi/jwt@3.2.5",
+    "@hapi/jwt-vulnerable": "npm:@hapi/jwt@3.2.4"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  }
+}
